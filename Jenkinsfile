@@ -40,6 +40,8 @@ pipeline {
                     // We use 'jammy' (Ubuntu 22.04) because 'noble' didn't exist for v1.39.0
                     image 'mcr.microsoft.com/playwright:v1.39.0-jammy'
                     reuseNode true
+                    // This ensures Playwright looks in the pre-installed Docker folder
+                    args '-e PLAYWRIGHT_BROWSERS_PATH=/ms-playwright'
                 }
             }
             steps {

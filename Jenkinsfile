@@ -17,10 +17,9 @@ pipeline {
             }
             steps {
                 sh '''
-                    ls -la
-                    npm ci
-                    npm run build
-                    ls -la
+                rm -rf node_modules
+                npm ci
+                npm run build
                 '''
             }
         }

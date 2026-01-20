@@ -18,6 +18,7 @@ pipeline {
             steps {
                 sh '''
                 rm -rf node_modules
+                npm install
                 npm ci
                 npm run build
                 '''

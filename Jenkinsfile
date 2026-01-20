@@ -60,7 +60,7 @@ pipeline {
                     npx wait-on http://localhost:3000 --timeout 30000
 
                     # 4. Run tests
-                    npx playwright test --config=playwright.config.js
+                    npx playwright test --config=playwright.config.js --reporter=html
                 '''
             }
         }

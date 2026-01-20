@@ -44,7 +44,7 @@ pipeline {
                 docker {
                     // Match your devDependencies: v1.39.0
                     // We use 'jammy' (Ubuntu 22.04) because 'noble' didn't exist for v1.39.0
-                    image 'mcr.microsoft.com/playwright:v1.49.0-jammy'
+                    image 'mcr.microsoft.com/playwright:v1.57.0-jammy'
                     reuseNode true
                 }
             }
